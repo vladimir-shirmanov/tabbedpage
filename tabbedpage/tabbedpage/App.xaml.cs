@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 using Xamarin.Forms;
 
 namespace tabbedpage
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
 		public App ()
 		{
@@ -18,7 +17,10 @@ namespace tabbedpage
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
+            // Handle when your app starts
+            AppCenter.Start("android=b48fe815-387b-4aa0-86c0-3532ebd75853;",
+                typeof(Analytics),
+                typeof(Crashes));
 		}
 
 		protected override void OnSleep ()

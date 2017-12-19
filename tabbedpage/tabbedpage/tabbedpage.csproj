@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="microsoft.appcenter.analytics" Version="1.1.0" />
+    <PackageReference Include="microsoft.appcenter.crashes" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
   </ItemGroup>
 
